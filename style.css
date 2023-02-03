@@ -64,7 +64,6 @@ section {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-right: 20px;
 
 }
 
@@ -90,8 +89,6 @@ table#skills {
     line-height: 20px;
     font-weight: bold;
 }
-
-/*make the progress bars fatter*/
 
 .tablecontents {
     font-size: .9em;
@@ -224,16 +221,23 @@ a:hover{
     .sidebar {
         border-right: none;
         border-bottom: 1px solid grey;
-        width: 100%;
+        width: 100vw;
         align-items: center;
         justify-content: center;
         height: 42vh;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .content {
-        width: 100%;
+        width: 98vw;
         justify-content: center;
         align-items: flex-start;
         height: 38vh;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 2vw;
     }
     h1 {
         margin: auto;

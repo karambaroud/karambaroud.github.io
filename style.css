@@ -1,0 +1,262 @@
+.header {
+    border-top: 2px solid purple;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    /* margin-bottom: 20px; */
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0px 3px grey;
+}
+
+body { margin:0; padding:0; }
+ 
+.wrap {
+    border-top: 1vh solid white;
+    width: 100vw;
+    height: 99vh;
+    margin: 0 auto;
+}
+/* .header { 
+    height:140px;
+    margin-bottom:15px;
+    background-color:#0d7963;
+}
+.content {
+    width:640px;
+    height:450px;
+    background-color:#0d7963;
+    float:right;
+}
+.sidebar {
+    width:325px;
+    height:450px;
+    background-color:#0d7963;
+    float:left;
+}
+.footer {
+    height:70px;
+    margin-top:15px;
+    background-color:#0d7963;
+}
+.clear {
+    clear:both;
+} */
+
+section {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    display: flex;
+    height: 78vh;
+}
+
+.sidebar {
+    border-right: 1px solid rgb(210, 210, 210);
+    padding: 10px;
+    width: 35vw;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 20px;
+
+}
+
+
+.content{
+    width: 65vw;
+    padding: 10px;
+    flex: 2;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+table {
+    max-width: 800px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(80, 80, 80);
+}
+
+table#skills {
+    max-width: none;
+    width: 70%;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+/*make the progress bars fatter*/
+
+.tablecontents {
+    font-size: .9em;
+    margin-top: 5px;
+    line-height: 20px;
+    padding-bottom: 40px;
+
+}
+#timelocation {
+    text-align: right;
+}
+
+.row {
+    width: 50%;
+}
+progress {
+    width: 100%;
+    height: 30px;
+}
+
+h1 {
+    font: 2em/2em 'Roboto', sans-serif;
+    color: rgb(80, 80, 80);
+    font-weight: lighter;
+}
+
+h2 {
+    font: 1.5em/1.5em 'Roboto', sans-serif;
+    color: rgb(80, 80, 80);
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font: 1.25em/1.25em 'Roboto', sans-serif;
+    color: rgb(80, 80, 80);
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h4 {
+    font: 1.1em/1.1em 'Roboto', sans-serif;
+    color: rgb(80, 80, 80);
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(80, 80, 80);
+}
+#me {
+    max-width: 800px;
+}
+#credentials {
+    color: darkgrey;
+}
+
+.currentpage {
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+#anchorlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*modify anchor tags*/
+.webpageLinks {
+    color: grey;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.webpageLinks:hover {
+    color: purple;
+    text-decoration: none;
+}
+
+a#personal {
+    color: purple;
+    font-size: .75em;
+}
+a {
+    color: purple;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    border-top: 1px solid rgb(210, 210, 210);
+    background-color: rgb(245, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em;
+    /* margin-top: 20px; */
+}
+
+#interests {
+    list-style-type: '- ';
+}
+
+.interest-items {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(80, 80, 80);
+}
+
+@media only screen and (max-width: 800px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        height: 78vh;
+    }
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid grey;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 42vh;
+    }
+    .content {
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        height: 38vh;
+    }
+    h1 {
+        margin: auto;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+    p {
+        margin: 5px;
+    }
+    .tablecontents {
+        padding-bottom: 20px;
+    }
+    table {
+        width: 95%;
+        line-height: 10px;
+    }
+    table#skills {
+        width: 95%;
+        line-height: 15px;
+        margin: none;
+    }
+    progress {
+        height: 15px;
+    }
+
+}
+

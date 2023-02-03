@@ -100,12 +100,13 @@ table#skills {
     padding-bottom: 40px;
 
 }
-#timelocation {
-    text-align: right;
-}
+
 
 .row {
     width: 50%;
+}
+.timelocation {
+    text-align: right;
 }
 progress {
     width: 100%;

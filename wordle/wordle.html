@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="Wordle Icon.png">
+  </head>
+  <body>
+    <div class="header">
+
+      <div class="placeholder">&nbsp;&nbsp;
+        <a id="backButton" href="../projects.html">&lt;  Back to Projects</a>
+      </div>
+      <div class="title">Wordle</div>
+      <div id="buttonOverlay">
+        <button class="headerButtons" id="darkMode" type="button">&#9681;</button>
+        <button class="headerButtons" id="hint" type="button">&#63;</button>
+        <button class="headerButtons" id="info" type="button">&#9432;</button>
+      </div>
+    </div>
+
+    <div id="winScreen">
+      <img src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt="You Win" />
+    </div>
+
+    <div id="infoWrap">
+      <div class="wrap">
+        <div id="game">
+          <div class="grid">
+            <div class="box" id="box00"></div>
+            <div class="box" id="box01"></div>
+            <div class="box" id="box02"></div>
+            <div class="box" id="box03"></div>
+            <div class="box" id="box10"></div>
+            <div class="box" id="box11"></div>
+            <div class="box" id="box12"></div>
+            <div class="box" id="box13"></div>
+            <div class="box" id="box20"></div>
+            <div class="box" id="box21"></div>
+            <div class="box" id="box22"></div>
+            <div class="box" id="box23"></div>
+            <div class="box" id="box30"></div>
+            <div class="box" id="box31"></div>
+            <div class="box" id="box32"></div>
+            <div class="box" id="box33"></div>
+
+          </div>
+
+        </div>
+        <button id="startOver" type="button">Start Over</button>
+      </div>
+
+      <div id="infoTab">
+        <p><b>How To Play</b></p>
+        <ul>
+          <li>Start typing. The letters will appear in the boxes.</li>
+          <li>Remove letters with Backspace.</li>
+          <li>Hit Enter/Return to submit an answer.</li>
+          <li>Letters with a green background are in the right spot.</li>
+          <li>Letters with a yellow background exist in the word, but are in the wrong spots.</li>
+          <li>Letters with a gray background do not exist in the word.</li>
+          <li>If you need a hint, click the <b>&#63;</b> icon.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div id="shfFooter"></div>
+    <div id="footer">
+      &#169; KB
+    </div>
+    <script src="./wordle.js"></script>
+  </body>
+</html>

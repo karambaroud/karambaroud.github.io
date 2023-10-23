@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+}
+
+:root {
+  --wrong: #3a3a3c;
+  --close: #b59f3b;
+  --right: #538d4e;
+}
+
+.wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#infoWrap {
+  display: flex;
+}
+
+#infoTab {
+  width: 100%;
+  border-left: 1px solid rgb(210, 210, 210);
+  display: none;
+}
+
+p {
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#game {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: calc(99vh - 90px);
+
+}
+
+.grid {
+  position: absolute;
+  top: 225px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(4, auto);
+}
+
+#startOver {
+  position: absolute;
+  top: 425px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 125px;
+  height: 40px;
+  color: white;
+  background-color: rgb(132, 185, 67);
+  border-radius: 12px;
+  font-weight: normal;
+  border: none;
+  font-size: 1rem;
+}
+
+#startOver.winScreen {
+  top: -125px;
+}
+
+#startOver:hover {
+  border: 2px solid olive;
+  color:rgb(210, 210, 210);
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid darkgray;
+  margin: 4px;
+  color: black;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.box.darkMode {
+  color: white;
+}
+
+.box.wrong {
+  background: var(--wrong) !important;
+  color: white;
+}
+
+.box.close {
+  background: var(--close) !important;
+}
+
+.box.right {
+  background: var(--right) !important;
+}
+
+.box.currentBox {
+  border: 2px solid var(--wrong);
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid rgb(210, 210, 210);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttonOverlay {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+button.headerButtons {
+  border: none;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: white;
+}
+.headerButtons:hover {
+  background-color: grey !important;
+}
+
+button:disabled {
+  pointer-events: none;
+  color: black;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  border-top: 1px solid rgb(210, 210, 210);
+  background-color: white;
+  font-size: .75rem;
+}
+
+#shfFooter {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border-top: 1px solid rgb(210, 210, 210);
+  /* visibility: hidden; */
+}
+
+.darkMode {
+  background-color: #121213 !important;
+  color: white !important;
+}
+
+#winScreen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: calc(92vh - 90px);
+}
+
+#backButton {
+  color: grey;
+  text-decoration: none;
+}
+
+#backButton:hover {
+  color: purple;
+}

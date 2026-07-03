@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <rect width="1200" height="675" fill="#151218"/>
+
+  <!-- grid -->
+  <g stroke="#221d2b" stroke-width="1">
+    <path d="M0 135H1200M0 270H1200M0 405H1200M0 540H1200"/>
+    <path d="M150 0V675M300 0V675M450 0V675M600 0V675M750 0V675M900 0V675M1050 0V675"/>
+  </g>
+
+  <!-- ultrasonic dropout band -->
+  <rect x="540" y="0" width="330" height="675" fill="#a583e6" opacity="0.05"/>
+  <line x1="540" y1="0" x2="540" y2="675" stroke="#a583e6" stroke-width="1" stroke-dasharray="3 6" opacity="0.35"/>
+  <line x1="870" y1="0" x2="870" y2="675" stroke="#a583e6" stroke-width="1" stroke-dasharray="3 6" opacity="0.35"/>
+  <text x="705" y="72" fill="#7d7689" font-size="20" text-anchor="middle" letter-spacing="3">ULTRASONIC DROPOUT</text>
+
+  <!-- baseline INS: diverges during dropout -->
+  <path d="M60 430 C 180 400, 300 415, 420 395 S 540 370, 600 350 C 680 320, 760 240, 840 165 C 880 128, 910 100, 940 78"
+        fill="none" stroke="#7d7689" stroke-width="3.5" stroke-dasharray="10 9" opacity="0.75"/>
+
+  <!-- ground truth -->
+  <path d="M60 425 C 200 395, 340 420, 480 390 S 720 400, 860 375 S 1060 395, 1140 370"
+        fill="none" stroke="#4a4457" stroke-width="3"/>
+
+  <!-- NN prediction: tracks ground truth through dropout -->
+  <path d="M60 420 C 200 388, 340 428, 480 384 S 720 410, 860 368 S 1060 402, 1140 362"
+        fill="none" stroke="#a583e6" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- ultrasonic fixes (absent inside dropout band) -->
+  <g fill="#c0a5f0">
+    <circle cx="105" cy="418" r="5"/>
+    <circle cx="210" cy="399" r="5"/>
+    <circle cx="315" cy="416" r="5"/>
+    <circle cx="420" cy="395" r="5"/>
+    <circle cx="510" cy="386" r="5"/>
+    <circle cx="915" cy="372" r="5"/>
+    <circle cx="1020" cy="392" r="5"/>
+    <circle cx="1125" cy="366" r="5"/>
+  </g>
+
+  <!-- legend -->
+  <g font-size="20">
+    <line x1="855" y1="562" x2="905" y2="562" stroke="#a583e6" stroke-width="4.5" stroke-linecap="round"/>
+    <text x="920" y="569" fill="#b6b0c0">NN + IMU</text>
+    <line x1="855" y1="602" x2="905" y2="602" stroke="#7d7689" stroke-width="3.5" stroke-dasharray="10 9"/>
+    <text x="920" y="609" fill="#7d7689">baseline INS</text>
+    <circle cx="880" cy="640" r="5" fill="#c0a5f0"/>
+    <text x="920" y="647" fill="#7d7689">ultrasonic fix</text>
+  </g>
+</svg>

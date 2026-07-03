@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "name": "Karam Baroud",
+    "tagline": "Software engineer working across embedded systems, ML, and full-stack.",
+    "description": "Software engineer at the Foundation of the Energy Collective. I build embedded positioning systems, neural-network tooling, and full-stack web platforms.",
+    "siteUrl": "https://karambaroud.github.io",
+    "email": "karambaroud@gmail.com",
+    "github": "https://github.com/karambaroud",
+    "linkedin": "https://www.linkedin.com/in/karam-baroud-89319a210/",
+    "resumePdf": "/resume.pdf",
+    "location": "Calgary, Alberta, Canada",
+    "headshot": "/headshot.jpg"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Karam.",
+    "intro": "Full Stack Developer at the Foundation of the Energy Collective. Before that, I spent a year in R&D at ZeroKey optimizing embedded positioning engines and training neural networks for inertial navigation. I like working close to the metal and close to the user, often in the same week."
+  },
+  "impact": [
+    {
+      "stat": "35–50%",
+      "label": "faster INS positioning engine",
+      "context": "Optimized ZeroKey's inertial navigation engine from ~7ms to ~2–3ms per iteration on embedded hardware."
+    },
+    {
+      "stat": "8× faster",
+      "label": "dataset processing",
+      "context": "Cut offline positioning dataset processing from several minutes to under 30 seconds, across 100+ ultrasonic and IMU datasets."
+    },
+    {
+      "stat": "24 × 30k+",
+      "label": "datasets × entries for NN training",
+      "context": "Built and supervised neural-network IMU positioning, trained on 24 large-scale datasets of 30,000+ entries each in PyTorch."
+    },
+    {
+      "stat": "10,000+",
+      "label": "assets tracked in production",
+      "context": "Led and built a QR-code asset tracking platform to manage 200+ computers and 10,000+ PPE boxes."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Asset Tracker",
+      "description": "QR-code-based inventory tracking platform built as a capstone for Tartigrade Ltd. and the Foundation of the Energy Collective, deployed and in active use before the project even finished. Led the 5-person team as PM and contributed to all aspects of the system: React frontend, Express APIs, PostgreSQL, Keycloak auth, and CI/CD. Tracks 10,000+ assets across multiple locations. This is the project that led directly to my current role.",
+      "tags": ["Full-Stack"],
+      "tech": ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Keycloak", "Docker", "GitHub Actions"],
+      "links": {
+        "page": "https://feccanada.org/projects/cmo3azkbh0006v50j5zzt1fhj"
+      },
+      "image": "/projects/asset-tracker.jpg",
+      "year": "2025-2026"
+    },
+    {
+      "title": "AI-IMU Neural Network Positioning",
+      "description": "Supervised neural-network inertial positioning system built during R&D at ZeroKey. Trained models on 24 large-scale ultrasonic + IMU datasets (30,000+ entries each) and ran dozens of experiments on positioning accuracy and ultrasonic dropout handling. Significantly reduced positioning error at low ultrasonic frequencies and kept positioning stable through signal loss where the baseline INS diverged.",
+      "tags": ["ML", "Embedded"],
+      "tech": ["Python", "PyTorch", "C++", "Sensor Fusion", "Signal Processing"],
+      "links": {},
+      "image": "/projects/ai-imu-positioning.svg",
+      "year": "2024–2025",
+      "note": "Proprietary R&D (no public repo)"
+    },
+    {
+      "title": "Optical Sudoku Solver",
+      "description": "End-to-end computer vision pipeline that solves Sudoku puzzles from photographs: grid detection and perspective correction with OpenCV, cell extraction, CNN digit recognition in PyTorch, and a backtracking solver to fill in the answer.",
+      "tags": ["Computer Vision", "ML"],
+      "tech": ["Python", "OpenCV", "PyTorch"],
+      "links": {
+        "github": "https://github.com/eddie-an/Optical-Sudoku-Solver"
+      },
+      "image": "/projects/sudoku-solver.jpg",
+      "year": "2026"
+    },
+    {
+      "title": "Squirrel Showdown",
+      "description": "A complete game built in 48 hours for a game jam: defend your acorn stash from waves of increasingly bold squirrels in a treehouse environment. My first end-to-end shipped game, playable in the browser on itch.io.",
+      "tags": ["Game Dev"],
+      "tech": ["Godot", "GDScript"],
+      "links": {
+        "live": "https://karambaroud.itch.io/squirrel-showdown"
+      },
+      "image": "/projects/squirrel-showdown.png",
+      "year": "2024"
+    },
+    {
+      "title": "The Last Show: AI Obituary Generator",
+      "description": "Full-stack serverless application that generates AI-written obituaries with synthesized speech. Wired together the ChatGPT API, AWS Polly for voice, DynamoDB and Lambda for the backend, Cloudinary for media, and Terraform for infrastructure as code.",
+      "tags": ["Full-Stack"],
+      "tech": ["React", "Python", "AWS Lambda", "DynamoDB", "Terraform", "Cloudinary"],
+      "links": {
+        "github": "https://github.com/karambaroud/the-last-show-evan-and-karam"
+      },
+      "image": "/projects/the-last-show.jpg",
+      "year": "2023"
+    },
+    {
+      "title": "Tomato Leaf Disease Detection",
+      "description": "Deep learning image classifier for detecting tomato plant diseases from leaf photos. Used transfer learning with MobileNetV2 and tackled severe dataset imbalance with F1-score-driven evaluation instead of raw accuracy.",
+      "tags": ["ML", "Computer Vision"],
+      "tech": ["Python", "PyTorch", "MobileNetV2"],
+      "links": {},
+      "image": "/projects/leaf-disease.jpeg",
+      "year": "2025"
+    }
+  ],
+  "projectsNote": {
+    "text": "Bonus: a Wordle clone from my first web development course, still playable in the browser.",
+    "linkLabel": "Play Wordle",
+    "url": "/wordle/wordle.html"
+  },
+  "experience": [
+    {
+      "company": "Foundation of the Energy Collective",
+      "role": "Full Stack Developer",
+      "location": "Calgary, AB (Remote)",
+      "start": "June 2026",
+      "end": "Present",
+      "summary": "Hired off the back of my capstone project. I develop production software across multiple applications supporting FEC and Tartigrade Ltd., independently owning features end to end.",
+      "bullets": [
+        "Designed and shipped authentication-gated functionality for the FEC website (Keycloak Sign-In, registration, profiles, and protected content) using React, Next.js, and PostgreSQL.",
+        "Built and deployed a volunteer job board with per-position and general application workflows, now live in production.",
+        "Developed an AI content checker with the OpenAI API that reviews student project descriptions against organizational policy, deployed to production.",
+        "Rapidly learned C# to enhance a production CSV-to-PostgreSQL trade import pipeline: parsing and normalization fixes, settlement date calculation, and futures/options multiplier handling.",
+        "Formulated Python tooling for latest MNI Market News API article retrieval, historical queries, and live streaming."
+      ],
+      "tech": ["React", "TypeScript", "Next.js", "PostgreSQL", "Keycloak", "OpenAI API", "Python", "C#"]
+    },
+    {
+      "company": "ZeroKey Inc.",
+      "role": "Research & Development Intern",
+      "location": "Calgary, AB",
+      "start": "May 2024",
+      "end": "July 2025",
+      "summary": "Fourteen months in a small, highly autonomous R&D team working on high-precision 3D positioning: embedded performance work, offline tooling, and neural-network inertial navigation.",
+      "bullets": [
+        "Optimized the INS positioning engine by 35–50%: from ~7ms to ~2–3ms per iteration while moving, and from a ~9ms ceiling to ~4–5ms static.",
+        "Built an embedded offline replay tool running directly on MCU hardware with exact 1:1 output parity to the live system, cutting dataset processing from several minutes to under 30 seconds across 100+ datasets.",
+        "Trained supervised neural networks for IMU positioning on 24 datasets of 30,000+ entries each, significantly reducing error at low ultrasonic frequencies and improving stability through signal dropout.",
+        "Developed multiprocessing tooling for concurrent dataset experimentation, a fall detection system validated with physical drop/mannequin/human testing, and hex log parsing pipelines.",
+        "Profiled double-to-float precision tradeoffs in the positioning engine and fixed GDOP calculation bugs in the anchor layout tool."
+      ],
+      "tech": ["C++", "Python", "PyTorch", "Embedded Systems", "Sensor Fusion", "Signal Processing"]
+    }
+  ],
+  "education": {
+    "school": "University of Calgary",
+    "degree": "BSc Software Engineering",
+    "graduation": "April 2026",
+    "gpa": "3.87",
+    "highlights": [
+      "Dean's List (2022, 2023, 2024)",
+      "Jason Lang Scholarship (2022, 2023, 2024)",
+      "Mike and Hilda Kinakin Bursary in Engineering (2024)",
+      "Alexander Rutherford Scholarship (2021)",
+      "Sustainable Campus Challenge: 2nd Place, Hunter Hub Solutions Lab (2023)"
+    ]
+  },
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["Python", "C++", "TypeScript", "JavaScript", "Java", "C#", "C", "SQL", "GDScript"]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": ["React", "Next.js", "Node.js", "Express", "PyTorch", "OpenCV", "Tailwind CSS", "Material UI"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": ["AWS Lambda", "Terraform", "Docker", "GitHub Actions", "GCP", "Render", "Neon", "Netlify"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MySQL", "DynamoDB", "Firebase"]
+    },
+    {
+      "category": "Tools & Domains",
+      "items": ["Git", "Linux", "Keycloak", "REST APIs", "Embedded Systems", "Sensor Fusion", "Signal Processing", "Computer Vision", "Neural Networks"]
+    }
+  ]
+}

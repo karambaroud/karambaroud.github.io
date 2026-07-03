@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* Neutral base — near-black with a faint violet undertone */
+  --color-base: #0d0b11;
+  --color-surface: #151218;
+  --color-raised: #1d1923;
+  --color-edge: #2a2433;
+  --color-ink: #ece9f1;
+  --color-body: #b6b0c0;
+  --color-faint: #7d7689;
+
+  /* Sunset purple accent ramp — dusk, not neon */
+  --color-accent-200: #d8c7f7;
+  --color-accent-300: #c0a5f0;
+  --color-accent-400: #a583e6;
+  --color-accent-500: #8d66d6;
+  --color-accent-600: #7550ba;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif,
+    system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-accent-500);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-400);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
